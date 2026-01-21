@@ -44,7 +44,6 @@
 - We take the best model overall (measured by having the least validation loss)
 - Taking all these things into consideration, the final model that we have gotten has stats: Train Loss: 2.7064, Train PPL: 14.98, Val Loss: 3.3201, Val PPL: 27.66, Val BLEU-1 (approx): 0.3899
 - This result suggests that even though our model is very good, it seems that there is quite some room for improvement (val loss of 3.32 is not small obviously), the problem is the data size, to improve these results we need larger data, flicker8k is a small dataset when talking about image captioning task and does not let us produce better results, the result we got, tried many things afterwards to improve but failed, we thought was the limitation of this dataset.
-- to support our concerns with the real evidence, we ran the same code for flicker30k dataset and got much better results (val loss) proving our point.
 
 📊 Epoch [1/15]
    Train Loss: 4.4325
