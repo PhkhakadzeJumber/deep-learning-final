@@ -19,6 +19,7 @@
 - Encoder: pretrained CNN (ResNet)
 - Preparation layer: Transforms Restnet output features to match embedding layer size of decoder
 - Decoder: Transformer decoder (3 layers)
+- Number of params: 42 million
 
 ## Important parameters for Train / Validation
 - Loss function: Cross-Entropy Loss (padding tokens ignored)
