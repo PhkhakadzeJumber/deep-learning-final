@@ -19,7 +19,7 @@
 - Encoder: pretrained CNN (ResNet)
 - Projection layer: Transforms Restnet output features to match embedding layer size of decoder
 - Decoder: Transformer decoder (3 layers)
-- Number of params: 44 million total 
+- Number of params: was 44 million before, after Glove it is 31M
 
 ## Important parameters for Train / Validation
 - Loss function: Cross-Entropy Loss (padding tokens ignored)
