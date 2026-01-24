@@ -10,16 +10,16 @@
 - Data type: captions.txt having (image, caption) pairs, all images provided in Images folder
 
 ## Preprocessing
-- Tokenization done with built in BPE tokenizer which is a subword type tokenizer
+- Tokenization was previously done with built in BPE tokenizer which is a subword type tokenizer, but now we have pretrained Glove embeddings for captions which is better in general.
 - Padding with collatefn function, needed because we need to stack all images and captions together to input them afterwards in the model, for doing that we need vectors gotten from tokenization of captions to have same lengths, so we use padding to max length vector in each batch
 - Normalization of images, better for CNN that we use in the model to learn images faster, more stable and avoid exploding gradients
 - Image augmentation was avoided. Applying a transformation to an image may require changing the caption assigned to it. E.g., if the caption mentions the color of an object and color shift is applied to the image, the caption needs to changed; if the caption mentions the direction of some object and rotation is applied to the image, the caption needs to be changed. There is no simple way of changing the caption given the image and the transformation
 
 ## Model Architecture
 - Encoder: pretrained CNN (ResNet)
-- Preparation layer: Transforms Restnet output features to match embedding layer size of decoder
+- Projection layer: Transforms Restnet output features to match embedding layer size of decoder
 - Decoder: Transformer decoder (3 layers)
-- Number of params: 42 million
+- Number of params: 44 million total 
 
 ## Important parameters for Train / Validation
 - Loss function: Cross-Entropy Loss (padding tokens ignored)
